@@ -5,48 +5,56 @@ A modern, AI-powered workspace management application built with React, TypeScri
 ## ✨ Features
 
 ### 🤖 AI-Powered Intelligence
+
 - **Smart Suggestions**: AI-powered title, description, and tag suggestions based on context
 - **Auto-Categorization**: Intelligent card categorization with priority and status detection
 - **Productivity Insights**: AI-generated workflow recommendations and bottleneck detection
 - **Content Analysis**: Automatic extraction of keywords, technologies, and task types
 
 ### 👥 Real-Time Collaboration
+
 - **Live Cursors**: See other users' cursor positions in real-time
 - **User Presence**: Online status indicators with live user avatars
 - **Collaboration Events**: Real-time updates for card movements and edits
 - **WebRTC Infrastructure**: Peer-to-peer collaboration ready
 
 ### 📊 Advanced Analytics Dashboard
+
 - **Productivity Metrics**: Completion rates, time tracking, productivity scores
 - **Workflow Analysis**: Column distribution and bottleneck identification
 - **Interactive Charts**: Visual insights with drill-down capabilities
 - **AI Insights**: Automated recommendations for workflow optimization
 
 ### ⌨️ Command Palette & Shortcuts
+
 - **Global Search**: Quick access to all features (⌘K)
 - **Keyboard Navigation**: Full keyboard accessibility throughout the app
 - **Smart Commands**: Context-aware command suggestions
 - **Quick Actions**: Rapid page navigation and task creation
 
 ### 🔍 Advanced Search with Filters
+
 - **Multi-Field Search**: Search titles, descriptions, and tags simultaneously
 - **Advanced Filters**: Status, date range, tags, priority filters
 - **Search Scoring**: Intelligent result ranking with highlighting
 - **Real-Time Results**: Instant search with live updates
 
 ### 📤 Export/Import Functionality
+
 - **Multiple Formats**: Export to JSON, CSV, Markdown, PDF
 - **Data Migration**: Import from various sources with conflict resolution
 - **Backup & Restore**: Complete workspace backups with versioning
 - **Template System**: Save and reuse workspace templates
 
 ### 🎨 Enhanced Theme System
+
 - **System Detection**: Automatic theme switching based on OS preference
 - **Dark/Light Modes**: Complete theme coverage with smooth transitions
 - **Theme Persistence**: User preferences saved across sessions
 - **Custom Themes**: Extensible theme system
 
 ### 💫 Professional UI/UX
+
 - **Modern Animations**: Smooth micro-interactions using Framer Motion
 - **Responsive Design**: Mobile-first approach with comprehensive breakpoints
 - **Accessibility**: WCAG compliant with full keyboard navigation
@@ -55,6 +63,7 @@ A modern, AI-powered workspace management application built with React, TypeScri
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **React 18** - Modern React with hooks and concurrent features
 - **TypeScript** - Full type safety across the application
 - **Vite** - Lightning-fast build tool and development server
@@ -63,12 +72,14 @@ A modern, AI-powered workspace management application built with React, TypeScri
 - **DnD Kit** - Advanced drag and drop functionality
 
 ### Styling
+
 - **CSS Modules** - Scoped styling with CSS variables
 - **Tailwind-inspired** - Utility-first approach with custom design system
 - **CSS Grid & Flexbox** - Modern layout techniques
 - **CSS Custom Properties** - Dynamic theming and animations
 
 ### Development Tools
+
 - **ESLint** - Code quality and consistency
 - **TypeScript Compiler** - Strict type checking
 - **Prettier** - Code formatting (configured)
@@ -77,14 +88,15 @@ A modern, AI-powered workspace management application built with React, TypeScri
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn package manager
 
 ### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/professional-workspace.git
+git clone https://github.com/JahanzaibJameel/Professional-workspace.git
 cd professional-workspace
 
 # Install dependencies
@@ -138,21 +150,27 @@ src/
 ## 🎯 Key Features Deep Dive
 
 ### AI-Powered Suggestions
+
 The AI service analyzes your workspace context to provide intelligent suggestions:
+
 - **Content Analysis**: Extracts keywords, technologies, and task types
 - **Pattern Recognition**: Learns from your existing cards and workflows
 - **Smart Tagging**: Suggests relevant tags based on content
 - **Priority Detection**: Automatically identifies task urgency
 
 ### Real-Time Collaboration
+
 Built for modern team collaboration:
+
 - **WebSocket Integration**: Real-time event streaming
 - **Conflict Resolution**: Handles simultaneous edits gracefully
 - **Presence Awareness**: See who's working on what
 - **Live Sync**: Changes propagate instantly to all users
 
 ### Advanced Analytics
+
 Comprehensive insights into your productivity:
+
 - **Completion Metrics**: Track task completion rates over time
 - **Workflow Analysis**: Identify bottlenecks and inefficiencies
 - **Productivity Scoring**: AI-powered productivity assessment
@@ -161,6 +179,7 @@ Comprehensive insights into your productivity:
 ## 🎨 Design System
 
 ### Color Palette
+
 - **Primary**: `#667eea` to `#764ba2` (gradient)
 - **Success**: `#10b981`
 - **Warning**: `#f59e0b`
@@ -168,17 +187,20 @@ Comprehensive insights into your productivity:
 - **Neutral**: `#6b7280` to `#1f2937`
 
 ### Typography
+
 - **Headings**: Inter font, 600 weight
 - **Body**: Inter font, 400 weight
 - **Code**: SF Mono, Monaco, Inconsolata
 
 ### Spacing
+
 - **Base Unit**: 4px (0.25rem)
 - **Scale**: 4, 8, 12, 16, 20, 24, 32, 40, 48px
 
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file for local configuration:
 
 ```env
@@ -193,6 +215,7 @@ VITE_ENABLE_ANALYTICS=true
 ```
 
 ### Theme Customization
+
 Extend the theme system in `src/styles/themes.css`:
 
 ```css
@@ -224,16 +247,19 @@ npm run test:coverage
 ## 📦 Deployment
 
 ### Production Build
+
 ```bash
 npm run build
 ```
 
 The build will be output to the `dist/` directory with:
+
 - **Static Assets**: Optimized CSS, JS, and images
 - **Service Worker**: For offline functionality
 - **Manifest**: PWA configuration
 
 ### Docker Deployment
+
 ```dockerfile
 FROM node:18-alpine
 WORKDIR /app
@@ -254,6 +280,7 @@ CMD ["npm", "run", "preview"]
 5. **Open** a Pull Request
 
 ### Code Standards
+
 - **TypeScript**: Strict mode enabled
 - **ESLint**: Follow configured rules
 - **Prettier**: Automatic formatting on save
@@ -273,9 +300,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [Wiki](https://github.com/your-username/professional-workspace/wiki)
-- **Issues**: [GitHub Issues](https://github.com/your-username/professional-workspace/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/your-username/professional-workspace/discussions)
+- **Documentation**: [Wiki](https://github.com/JahanzaibJameel/Professional-workspace/wiki)
+- **Issues**: [GitHub Issues](https://github.com/JahanzaibJameel/Professional-workspace/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/JahanzaibJameel/Professional-workspace/discussions)
 
 ---
 
