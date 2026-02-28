@@ -1,0 +1,394 @@
+.collaboration-presence {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.connection-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.connection-status .connected {
+  color: #10b981;
+}
+
+.connection-status .disconnected {
+  color: #ef4444;
+}
+
+.active-users {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.users-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #374151;
+  transition: all 0.2s ease;
+}
+
+.users-toggle:hover {
+  background: #e5e7eb;
+}
+
+.user-count {
+  font-weight: 600;
+}
+
+.user-avatars {
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid white;
+  margin-left: -8px;
+  transition: all 0.2s ease;
+}
+
+.user-avatar:first-child {
+  margin-left: 0;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.user-avatar.large {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  border-width: 2px;
+}
+
+.more-users {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e5e7eb;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  border: 2px solid white;
+  margin-left: -8px;
+}
+
+.user-list-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.dropdown-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+.close-dropdown {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-dropdown:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.user-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+.user-item:hover {
+  background: #f9fafb;
+}
+
+.user-item:last-child {
+  border-bottom: none;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.user-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.current-user-badge {
+  background: #667eea;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.user-email {
+  font-size: 12px;
+  color: #6b7280;
+  truncate: true;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.status-label {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #6b7280;
+}
+
+.no-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.no-users span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Live Cursors */
+.live-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+.live-cursor::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 6px;
+  height: 6px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.cursor-label {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  color: white;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Dark theme support */
+.collaboration-presence.dark {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.collaboration-presence.dark .connection-status {
+  color: #9ca3af;
+}
+
+.collaboration-presence.dark .users-toggle {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.collaboration-presence.dark .users-toggle:hover {
+  background: #4b5563;
+}
+
+.collaboration-presence.dark .user-avatar {
+  border-color: #1f2937;
+}
+
+.collaboration-presence.dark .more-users {
+  background: #374151;
+  color: #9ca3af;
+  border-color: #1f2937;
+}
+
+.collaboration-presence.dark .user-list-dropdown {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.collaboration-presence.dark .dropdown-header {
+  background: #374151;
+  border-color: #4b5563;
+}
+
+.collaboration-presence.dark .dropdown-header h3 {
+  color: #f1f5f9;
+}
+
+.collaboration-presence.dark .close-dropdown {
+  color: #9ca3af;
+}
+
+.collaboration-presence.dark .close-dropdown:hover {
+  background: #4b5563;
+  color: #d1d5db;
+}
+
+.collaboration-presence.dark .user-item {
+  border-color: #374151;
+}
+
+.collaboration-presence.dark .user-item:hover {
+  background: #374151;
+}
+
+.collaboration-presence.dark .user-name {
+  color: #f1f5f9;
+}
+
+.collaboration-presence.dark .user-email {
+  color: #9ca3af;
+}
+
+.collaboration-presence.dark .status-label {
+  color: #9ca3af;
+}
+
+.collaboration-presence.dark .no-users {
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .collaboration-presence {
+    padding: 6px 10px;
+  }
+
+  .user-list-dropdown {
+    width: 280px;
+    right: -8px;
+  }
+
+  .user-avatar {
+    width: 20px;
+    height: 20px;
+    font-size: 9px;
+  }
+
+  .user-avatar.large {
+    width: 28px;
+    height: 28px;
+    font-size: 11px;
+  }
+
+  .more-users {
+    width: 20px;
+    height: 20px;
+    font-size: 9px;
+  }
+}

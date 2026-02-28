@@ -1,0 +1,95 @@
+.board {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-x: auto;
+  background-color: var(--color-bg-primary);
+  min-height: 100%;
+}
+
+.columnsContainer {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  min-height: 400px;
+}
+
+.emptyBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20) var(--space-6);
+  text-align: center;
+  width: 100%;
+}
+
+.emptyIllustration {
+  font-size: 64px;
+  margin-bottom: var(--space-6);
+  opacity: 0.2;
+}
+
+.emptyTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.emptyDescription {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  max-width: 400px;
+  margin-bottom: var(--space-6);
+  line-height: var(--line-height-relaxed);
+}
+
+.emptyAction {
+  margin-top: var(--space-4);
+}
+
+.emptyPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--space-6);
+  text-align: center;
+}
+
+.addColumnContainer {
+  flex-shrink: 0;
+  width: 320px;
+  margin-top: var(--space-3);
+}
+
+.addColumnButton {
+  width: 100%;
+  height: 48px;
+  border: 1px dashed var(--color-border);
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.addColumnButton:hover {
+  background-color: var(--color-bg-hover);
+  border-color: var(--color-border-hover);
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 768px) {
+  .board {
+    padding: var(--space-4);
+  }
+  
+  .columnsContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .addColumnContainer {
+    width: 100%;
+  }
+}

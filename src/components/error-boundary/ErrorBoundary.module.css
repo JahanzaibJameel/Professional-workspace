@@ -1,0 +1,62 @@
+.errorBoundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: var(--space-6);
+  background-color: var(--color-bg-primary);
+}
+
+.errorContent {
+  max-width: 400px;
+  text-align: center;
+}
+
+.errorIcon {
+  color: var(--color-error);
+  margin-bottom: var(--space-4);
+}
+
+.errorTitle {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.errorDescription {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.errorDetails {
+  margin-bottom: var(--space-4);
+}
+
+.details {
+  margin-bottom: var(--space-4);
+}
+
+.summary {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+.errorMessage {
+  background-color: var(--color-bg-secondary);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  overflow: auto;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-2);
+  text-align: left;
+}
+
+.errorActions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}

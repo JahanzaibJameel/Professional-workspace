@@ -1,0 +1,346 @@
+.command-palette-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 20vh;
+  z-index: 1000;
+}
+
+.command-palette {
+  width: 90%;
+  max-width: 600px;
+  max-height: 70vh;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.command-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.search-icon {
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 16px;
+  color: #1f2937;
+  placeholder: #9ca3af;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+.command-key {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: #e5e7eb;
+  border-radius: 6px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.commands-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.command-category {
+  margin-bottom: 16px;
+}
+
+.category-header {
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  background: #f9fafb;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.command-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  color: #374151;
+}
+
+.command-item:hover {
+  background: #f3f4f6;
+}
+
+.command-item.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.command-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #f3f4f6;
+  border-radius: 8px;
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.command-item.selected .command-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.command-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.command-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.command-item.selected .command-title {
+  color: white;
+}
+
+.command-description {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.command-item.selected .command-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.command-shortcut {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #374151;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+  line-height: 1;
+}
+
+.command-item.selected kbd {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.no-results span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.no-results small {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.command-footer {
+  padding: 12px 20px;
+  border-top: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.footer-hints {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.hint kbd {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+/* Dark theme support */
+.command-palette-overlay.dark .command-palette {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+.command-palette-overlay.dark .command-search {
+  border-color: #374151;
+  background: #374151;
+}
+
+.command-palette-overlay.dark .search-icon {
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .search-input {
+  color: #f1f5f9;
+}
+
+.command-palette-overlay.dark .search-input::placeholder {
+  color: #6b7280;
+}
+
+.command-palette-overlay.dark .command-key {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .category-header {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .command-item {
+  color: #d1d5db;
+}
+
+.command-palette-overlay.dark .command-item:hover {
+  background: #374151;
+}
+
+.command-palette-overlay.dark .command-icon {
+  background: #374151;
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .command-item.selected .command-icon {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.command-palette-overlay.dark .command-description {
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .command-item.selected .command-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.command-palette-overlay.dark kbd {
+  background: #374151;
+  border-color: #4b5563;
+  color: #d1d5db;
+}
+
+.command-palette-overlay.dark .command-item.selected kbd {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.command-palette-overlay.dark .no-results {
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .command-footer {
+  border-color: #374151;
+  background: #374151;
+}
+
+.command-palette-overlay.dark .hint {
+  color: #9ca3af;
+}
+
+.command-palette-overlay.dark .hint kbd {
+  background: #4b5563;
+  border-color: #6b7280;
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .command-palette-overlay {
+    padding-top: 10vh;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .command-palette {
+    width: 100%;
+    max-height: 80vh;
+  }
+
+  .command-search {
+    padding: 12px 16px;
+  }
+
+  .search-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+
+  .command-item {
+    padding: 10px 12px;
+  }
+
+  .command-shortcut {
+    display: none;
+  }
+}
